@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies Watched</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<header>
+   <h1>Here is the list of the movies watched by {{ name }}</h1>
+</header>
+<section>
+    <h2> The List! </h2>
+{% for movie in movies %}
+    <ul>
+        <li> the movie is {{movie}}</li>
+    </ul>
+{% endfor %}
+
+</section>
+</body>
+</html>
